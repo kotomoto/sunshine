@@ -129,9 +129,8 @@ public class ForecastFragment extends Fragment {
                 if (buffer.length() == 0) {
                     return null;
                 }
-                forecastJsonStr = buffer.toString();
 
-                Log.v(LOG_TAG, "JSON Str: " + forecastJsonStr);
+                forecastJsonStr = buffer.toString();
             } catch (IOException e) {
                 Log.e(LOG_TAG, "Error ", e);
             } finally {
@@ -248,11 +247,7 @@ public class ForecastFragment extends Fragment {
                 resultStrs[i] = day + " - " + description + " - " + highAndLow;
             }
 
-            for (String s : resultStrs) {
-                Log.v(LOG_TAG, "Forecast entry: " + s);
-            }
             return resultStrs;
-
         }
 
         @Override
